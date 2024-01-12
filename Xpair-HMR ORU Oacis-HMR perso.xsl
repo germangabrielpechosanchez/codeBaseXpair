@@ -18,5 +18,260 @@
       <!-- ************************************************************************************************************************* -->
       <!--                                                          XSL PERSO                                                        -->
       <!-- ************************************************************************************************************************* -->
+      <!-- options, format de sortie -->
+      <xsl:strip-space elements="*"/>
+      <xsl:output omit-xml-declaration="yes" indent="yes" encoding="UTF-8" method="xml" version="1.0"/>
+   
+      <xsl:template match="/">
+         <xsl:element name="HL7">
+            <xsl:call-template name="MSH"/>
+            <xsl:call-template name="PID"/>
+            <xsl:call-template name="OBR"/>
+         </xsl:element>  
+      </xsl:template>      
+   
+      <xsl:template name="MSH">
+         <xsl:element name="MSH">
+            <xsl:call-template name="MSH.1"/> -->
+            <xsl:call-template name="MSH.2"/>
+            <xsl:call-template name="MSH.3"/>
+            <xsl:call-template name="MSH.4"/> 
+            <xsl:call-template name="MSH.5"/> 
+            <xsl:call-template name="MSH.6"/>
+            <xsl:call-template name="MSH.7"/>
+            <xsl:call-template name="MSH.8"/>
+            <xsl:call-template name="MSH.9"/>
+            <xsl:call-template name="MSH.10"/>
+            <xsl:call-template name="MSH.11"/>
+            <xsl:call-template name="MSH.12"/>
+            <xsl:call-template name="MSH.13"/>
+            <xsl:call-template name="MSH.14"/>
+            <xsl:call-template name="MSH.15"/>
+            <xsl:call-template name="MSH.16"/>
+            <xsl:call-template name="MSH.17"/>
+            <xsl:call-template name="MSH.18"/>
+         </xsl:element>
+      </xsl:template> 
+      
+      <xsl:template name="PID">
+         <xsl:element name="PID">
+            
+            <xsl:element name="PID.1.1">
+               <xsl:value-of select="/HL7/PID/PID.1.1"/>
+            </xsl:element>
+            
+            <xsl:element name="PID.2.1">
+               <xsl:value-of select="/HL7/PID/PID.2.1"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.3.1">
+               <xsl:value-of select="/HL7/PID/PID.3.1"/>
+            </xsl:element>
+            
+            <xsl:variable name="HopitalMaRosemont" select="'I'"/>
+            <xsl:element name="PID.4.1">
+               <xsl:value-of select="substring-after(/HL7/PID/PID.4.1[1],$HopitalMaRosemont)"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.4.2">
+               <xsl:value-of select="/HL7/PID/PID.4.2"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.4.3">
+               <xsl:value-of select="''"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.4.4">
+               <xsl:value-of select="/HL7/PID/PID.4.4"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.4.5">
+               <xsl:value-of select="/HL7/PID/PID.4.5[1]"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.4.6">
+               <xsl:value-of select="/HL7/PID/PID.4.6"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.4.1">
+               <xsl:value-of select="/HL7/PID/PID.4.1[2]"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.4.2">
+               <xsl:value-of select="''"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.4.3">
+               <xsl:value-of select="''"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.4.4">
+               <xsl:value-of select="''"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.4.5">
+               <xsl:value-of select="/HL7/PID/PID.4.5[2]"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.4.6">
+               <xsl:value-of select="''"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.5.1">
+               <xsl:value-of select="/HL7/PID/PID.5.1"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.5.2">
+               <xsl:value-of select="/HL7/PID/PID.5.2"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.6.1">
+               <xsl:value-of select="/HL7/PID/PID.6.1"/>
+            </xsl:element>           
+            
+            <xsl:element name="PID.7.1">
+               <xsl:value-of select="/HL7/PID/PID.7.1"/>
+            </xsl:element> 
+            
+            <xsl:element name="PID.8.1">
+               <xsl:value-of select="/HL7/PID/PID.8.1"/>
+            </xsl:element> 
+         </xsl:element>
+      </xsl:template>
+      
+      <xsl:template name="OBR">
+         <xsl:element name="OBR">
+            <xsl:element name="OBR.1.1">
+               <xsl:value-of select="/HL7/OBR/OBR.1.1[1]"/>
+            </xsl:element>
+            
+            <xsl:element name="OBR.2.1">
+               <xsl:value-of select="/HL7/OBR/OBR.2.1"/>
+            </xsl:element> 
+            
+            <xsl:element name="OBR.3.1">
+               <xsl:value-of select="/HL7/OBR/OBR.3.1"/>
+            </xsl:element>
+            
+            <xsl:element name="OBR.4.1">
+               <xsl:value-of select="/HL7/OBR/OBR.4.1"/>
+            </xsl:element> 
+            
+            <xsl:element name="OBR.4.2">
+               <xsl:value-of select="/HL7/OBR/OBR.4.2"/>
+            </xsl:element> 
+            
+            <xsl:element name="OBR.5.1">
+               <xsl:value-of select="''"/>
+            </xsl:element> 
+            
+            <xsl:element name="OBR.6.1">
+               <xsl:value-of select="''"/>
+            </xsl:element> 
+            
+            <xsl:element name="OBR.7.1">
+               <xsl:value-of select="/HL7/OBR/OBR.7.1"/>
+            </xsl:element> 
+            
+            <xsl:element name="OBR.8.1">
+               <xsl:value-of select="/HL7/OBR/OBR.8.1"/>
+            </xsl:element> 
+            
+            <xsl:element name="OBX">
+               <xsl:element name="OBX.1.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[1]/OBX.1.1"/>
+               </xsl:element>
+               
+               <xsl:element name="OBX.2.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[1]/OBX.2.1"/>
+               </xsl:element> 
+               
+               <xsl:element name="OBX.3.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[1]/OBX.3.1"/>
+               </xsl:element>
+               
+               <xsl:element name="OBX.4.1">
+                  <xsl:value-of select="''"/>
+               </xsl:element> 
+               
+               <xsl:element name="OBX.5.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[1]/OBX.5.1"/>
+               </xsl:element> 
+               
+               <xsl:element name="OBX.5.2">
+                  <xsl:value-of select="/HL7/OBR/OBX[1]/OBX.5.2"/>
+               </xsl:element> 
+            </xsl:element> 
+            
+            <xsl:element name="OBX">
+               <xsl:element name="OBX.1.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.1.1"/>
+               </xsl:element>
+               
+               <xsl:element name="OBX.2.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.2.1"/>
+               </xsl:element> 
+               
+               <xsl:element name="OBX.3.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.3.1"/>
+               </xsl:element>
+               
+               <xsl:element name="OBX.3.2">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.3.2"/>
+               </xsl:element>
+               
+               <xsl:element name="OBX.4.1">
+                  <xsl:value-of select="''"/>
+               </xsl:element> 
+               
+               <xsl:element name="OBX.5.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.5.1"/>
+               </xsl:element> 
+               
+               <xsl:element name="OBX.5.2">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.5.2"/>
+               </xsl:element>
+               
+               <xsl:element name="OBX.5.3">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.5.3"/>
+               </xsl:element>         
+   
+               <xsl:element name="OBX.5.4">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.5.4"/>
+               </xsl:element>         
+               
+               <xsl:element name="OBX.5.5">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.5.5"/>
+               </xsl:element>  
+          
+               <xsl:element name="OBX.6.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.6.1"/>
+               </xsl:element>  
+               
+               <xsl:element name="OBX.7.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.7.1"/>
+               </xsl:element>  
+               
+               <xsl:element name="OBX.8.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.8.1"/>
+               </xsl:element>  
+               
+               <xsl:element name="OBX.9.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.9.1"/>
+               </xsl:element>  
+               
+               <xsl:element name="OBX.10.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.10.1"/>
+               </xsl:element>  
+               
+               <xsl:element name="OBX.11.1">
+                  <xsl:value-of select="/HL7/OBR/OBX[2]/OBX.11.1"/>
+               </xsl:element>  
+               
+            </xsl:element> 
+         
+         </xsl:element>
+      </xsl:template>
+            
    </xsl:stylesheet>
 
