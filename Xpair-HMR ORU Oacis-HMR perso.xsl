@@ -32,27 +32,128 @@
    
       <xsl:template name="MSH">
          <xsl:element name="MSH">
-            <xsl:call-template name="MSH.1"/> -->
-            <xsl:call-template name="MSH.2"/>
-            <xsl:call-template name="MSH.3"/>
-            <xsl:call-template name="MSH.4"/> 
-            <xsl:call-template name="MSH.5"/> 
-            <xsl:call-template name="MSH.6"/>
-            <xsl:call-template name="MSH.7"/>
-            <xsl:call-template name="MSH.8"/>
-            <xsl:call-template name="MSH.9"/>
-            <xsl:call-template name="MSH.10"/>
-            <xsl:call-template name="MSH.11"/>
-            <xsl:call-template name="MSH.12"/>
-            <xsl:call-template name="MSH.13"/>
-            <xsl:call-template name="MSH.14"/>
-            <xsl:call-template name="MSH.15"/>
-            <xsl:call-template name="MSH.16"/>
-            <xsl:call-template name="MSH.17"/>
-            <xsl:call-template name="MSH.18"/>
+   
+     
+         <xsl:element name="MSH.1.1">
+            <xsl:value-of select="/HL7/MSH/MSH.1.1"/>
+         </xsl:element>
+    
+      
+      <!-- Encoding Characters-->
+     
+         <xsl:element name="MSH.2.1">
+            <xsl:value-of select="/HL7/MSH/MSH.2.1"/>
+         </xsl:element>
+   
+      
+      <!-- Sending Application-->
+    
+         <xsl:element name="MSH.3.1">
+            <xsl:value-of select="/HL7/MSH/MSH.3.1"/>
+         </xsl:element>
+   
+      
+      <!-- Sending facility -->
+   
+         <xsl:element name="MSH.4.1">
+            <xsl:value-of select="'HMR'"/>
+         </xsl:element>
+         
+         <xsl:element name="MSH.4.2">
+            <xsl:value-of select="'12934659'"/>
+         </xsl:element> 
+     
+      
+      
+         <xsl:element name="MSH.5.1">
+            <xsl:value-of select="'HMR_XPAIR_HL7'"/>
+         </xsl:element> 
+    
+      
+     
+         <xsl:element name="MSH.6.1">
+            <xsl:value-of select="'HMR'"/>
+         </xsl:element> 
+      
+      
+    
+         <xsl:element name="MSH.7.1">
+            <xsl:value-of select="/HL7/MSH/MSH.7.1"/>
+         </xsl:element>
+      
+      
+      
+         <xsl:element name="MSH.8.1">
+            <xsl:value-of select="/HL7/MSH/MSH.8.1"/>
+         </xsl:element>
+  
+      
+     
+         <xsl:element name="MSH.9.1">
+            <xsl:value-of select="/HL7/MSH/MSH.9.1"/>
+         </xsl:element>
+         
+         <xsl:element name="MSH.9.2">  
+            <xsl:value-of select="/HL7/MSH/MSH.9.2"/>
+         </xsl:element>
+            
+      
+    
+         <xsl:element name="MSH.10.1">
+            <xsl:value-of select="/HL7/MSH/MSH.10.1"/>
+         </xsl:element>
+      
+      
+     
+         <xsl:element name="MSH.11.1">
+            <xsl:value-of select="/HL7/MSH/MSH.11.1"/>
+         </xsl:element>
+            
+      
+    
+         <xsl:element name="MSH.12.1">
+            <xsl:value-of select="/HL7/MSH/MSH.12.1"/>
+         </xsl:element>
+       
+      
+    
+         <xsl:element name="MSH.13.1">
+            <xsl:value-of select="/HL7/MSH/MSH.13.1"/>
+         </xsl:element>
+       
+      
+     
+         <xsl:element name="MSH.14.1">
+            <xsl:value-of select="/HL7/MSH/MSH.14.1"/>
+         </xsl:element>
+       
+      
+    
+         <xsl:element name="MSH.15.1">
+            <xsl:value-of select="/HL7/MSH/MSH.15.1"/>
+         </xsl:element>
+       
+      
+     
+         <xsl:element name="MSH.16.1">
+            <xsl:value-of select="/HL7/MSH/MSH.16.1"/>
+         </xsl:element>
+       
+      
+    
+         <xsl:element name="MSH.17.1">
+            <xsl:value-of select="/HL7/MSH/MSH.17.1"/>
+         </xsl:element>
+       
+      
+      
+         <xsl:element name="MSH.18.1">
+            <xsl:value-of select="/HL7/MSH/MSH.18.1"/>
+         </xsl:element>
+
          </xsl:element>
       </xsl:template> 
-      
+ 
       <xsl:template name="PID">
          <xsl:element name="PID">
             
