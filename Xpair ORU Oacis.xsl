@@ -211,9 +211,21 @@
       </xsl:template>
       <!--IndexInfo.mrn-->
       <xsl:template name="IndexInfo.mrn">
+         <xsl:variable name="HopitalEntity" select="/HL7/MSH/MSH.4.1"/>
          <xsl:element name="mrn">
+            <xsl:variable name="HopitalSantaCabrini" select="'E'"/>
             <xsl:variable name="HopitalMaRosemont" select="'I'"/>
-            <xsl:value-of select="substring-after(/HL7/PID/PID.4.1[1]/text(),$HopitalMaRosemont)"/>
+            <xsl:choose>
+               
+               <xsl:when test="$HopitalEntity = 'HMR'">  
+                  <xsl:value-of select="substring-after(/HL7/PID/PID.4.1[1]/text(),$HopitalMaRosemont)"/>
+               </xsl:when>
+  
+               <xsl:when test="$HopitalEntity = 'HSCO'">  
+                  <xsl:value-of select="substring-after(/HL7/PID/PID.4.1[1]/text(),$HopitalSantaCabrini)"/>
+               </xsl:when>
+  
+            </xsl:choose>
          </xsl:element>
       </xsl:template>
       <!--IndexInfo.facility-->
